@@ -17,14 +17,14 @@ class PlayerSerializer(serializers.Serializer):
 
     def create(self, data):
         """
-        Create and return a new `Player` .
+        Create and return a new 'Player' .
         """
         return Player.objects.create(**data)
 
     def update(self, player, data):
 
         """
-        Update and return an existing `Player` 
+        Update and return an existing 'Player' 
         """
         player.name = data.get('name', player.name)
         player.game = data.get('game', player.game)
